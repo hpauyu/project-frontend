@@ -90,6 +90,9 @@ function Profile() {
     return (
         <div>
             <div>
+                Welcome From AWS
+            </div>
+            <div>
                 Name : {name}
             </div>
             <div>
