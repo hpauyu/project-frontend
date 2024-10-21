@@ -23,7 +23,7 @@ function Signup() {
             const fileName = encodeURIComponent(file.name);
             const contentType = file.type;
             const response = await axios.post(
-                'https://517x6ucd42.execute-api.us-east-1.amazonaws.com/prod/presignedurl',
+                'https://v2ljht5u1c.execute-api.us-east-1.amazonaws.com/prod/presignedurl',
                 {fileName,contentType}
             );
             const { uploadURL } = response.data;
@@ -34,7 +34,7 @@ function Signup() {
       
       
             const addToDatabase = await axios.post(
-                'https://517x6ucd42.execute-api.us-east-1.amazonaws.com/prod/signup',
+                'https://v2ljht5u1c.execute-api.us-east-1.amazonaws.com/prod/signup',
                 {
                     email,password,name,fileName
                 }
