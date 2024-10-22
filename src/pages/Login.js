@@ -19,7 +19,7 @@ function Login(){
 
     const handleLogin = async() =>{
         const response = await axios.post(
-            'https://v2ljht5u1c.execute-api.us-east-1.amazonaws.com/prod/login',
+            'https://g9424e9jof.execute-api.us-east-1.amazonaws.com/prod/login',
             {
                 email,password
             }

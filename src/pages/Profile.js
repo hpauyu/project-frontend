@@ -26,7 +26,7 @@ function Profile() {
                 // Make an API call to fetch profile data
                 try {
                     const response = await axios.post(
-                        'https://v2ljht5u1c.execute-api.us-east-1.amazonaws.com/prod/profile',
+                        'https://g9424e9jof.execute-api.us-east-1.amazonaws.com/prod/profile',
                         { email: savedData } // Use savedData directly instead of email state here
                     );
                     const data = response.data.data[0]
@@ -59,7 +59,7 @@ function Profile() {
             const fileName = encodeURIComponent(file.name);
             const contentType = file.type;
             const response = await axios.post(
-                'https://v2ljht5u1c.execute-api.us-east-1.amazonaws.com/prod/presignedurl',
+                'https://g9424e9jof.execute-api.us-east-1.amazonaws.com/prod/presignedurl',
                 {fileName,contentType}
             );
             const { uploadURL } = response.data;
@@ -69,7 +69,7 @@ function Profile() {
             });
             console.log(response)
             const updateDatabase = await axios.post(
-                'https://v2ljht5u1c.execute-api.us-east-1.amazonaws.com/prod/update',{fileName,email}
+                'https://g9424e9jof.execute-api.us-east-1.amazonaws.com/prod/update',{fileName,email}
             )
             if(updateDatabase.status === 200){
                 setFile(null)
